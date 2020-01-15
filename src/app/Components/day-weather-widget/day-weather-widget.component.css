@@ -1,0 +1,61 @@
+.weather-widget
+{
+    width: 130px;
+    height: 175px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    color: black;
+    color: white;
+    margin : 10px;
+}
+
+
+img 
+{
+    margin: -12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 80px;
+}
+
+.title 
+{
+   
+    font-weight: bolder;
+    font-size: 16px;
+    display: inline;
+}
+
+.date
+{
+    color: rgb(243, 243, 243);
+    font-size: small;
+    display: inline;
+}
+
+.temp
+{
+    margin:-14px;
+}
+
+.temp-range
+{
+    margin-top: 20px;
+}
+.temp-range *
+{
+    display:inline;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 24px;
+   
+}
+
+/* todo fix this */
+.temp-range:first-child
+{
+    color: rgb(243, 243, 243);
+}

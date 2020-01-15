@@ -1,0 +1,23 @@
+.weather-img
+{
+    position: absolute;
+    width: 150px;
+    top : 120px;
+    left: 70px;
+}
+
+.weather-img2
+{
+    position: absolute;
+    width: 150px;
+    top : 50px;
+    left: 155px;
+}
+
+.weather-today
+{
+    margin: 30px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 25px;
+}

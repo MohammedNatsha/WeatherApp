@@ -1,0 +1,119 @@
+
+.search-bar
+{
+    padding: 10px;
+    margin: 0px;
+    background:#6350EF;
+    width: 100%;
+    justify-content:space-between;
+}
+
+.search-input
+{
+    width: auto;
+    position: relative;
+}
+
+.search
+{
+    position: fixed;
+    right: 10px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    background-color: rgba(0, 0, 0, 0);
+    width:42px;
+    border-radius: 20px;
+    border: transparent;
+    height: 32px;
+    /* background */
+    background: url(../../../assets/Search-ico.png) no-repeat space 4px 4px;
+    background-position: calc(100% - 10px);
+    max-width: 42px;
+}
+
+.search:focus
+{
+    transition: all;
+    background-color: white;
+    transition-duration: 0.75s;
+    width: 90%;
+    outline: none;
+    max-width: 300px;
+}
+
+
+.autocomplete
+{
+   
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    visibility: hidden;
+    transition-delay: 0.1s;
+}
+
+.search:focus + .autocomplete 
+{
+    right: 125px;
+    transition-delay: 0s;
+    transition-duration: 0.75s;
+    visibility: visible;
+}
+
+.autocomplete
+{
+    z-index: 10;
+}
+
+.autocomplete *
+{
+    padding-left: 10px;
+    
+    display: block;
+}
+
+.autocomplete a:hover
+{
+    background: rgb(228, 228, 228);
+}
+.autocomplete a
+{
+    width: 170px;
+    padding: 10px;
+    background: white;
+}
+
+.autocomplete a:first-of-type
+{
+    background: white;;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.autocomplete a:last-of-type
+{
+    background: white;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+h2
+{
+    color: white;
+    position: fixed;
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.back
+{
+    position: static;
+    background-color: transparent;
+    background-image: url(../../../assets/back-ico.png);
+    border: none;
+    width: 32px;
+    height: 32px;
+    z-index:5;
+}

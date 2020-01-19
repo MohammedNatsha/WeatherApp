@@ -8,7 +8,18 @@ import { SearchBarComponent } from './Components/search-bar/search-bar.component
 import { DayWeatherWidgetComponent } from './Components/day-weather-widget/day-weather-widget.component';
 import { DaysWeatherListComponent } from './Components/days-weather-list/days-weather-list.component';
 import { TodayWeatherComponent } from './Components/today-weather/today-weather.component';
-import { WeatherDetailsComponent } from './Components/weather-details/weather-details.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './Pages/main-page/main-page.component';
+import { ViewComponent } from './Pages/view/view.component';
+import { SearchPipe } from './Pipes/search.pipe';
+import { TitleComponent } from './Components/title/title.component';
+
+const routes: Routes = [
+  { path: ':city', component: MainPageComponent },
+  { path: ':city/:day', component: ViewComponent },
+  { path: '**', component: MainPageComponent }
+];
+
 
 @NgModule({
   declarations: [
@@ -17,12 +28,16 @@ import { WeatherDetailsComponent } from './Components/weather-details/weather-de
     DayWeatherWidgetComponent,
     DaysWeatherListComponent,
     TodayWeatherComponent,
-    WeatherDetailsComponent
+    MainPageComponent,
+    ViewComponent,
+    SearchPipe,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

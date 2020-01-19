@@ -1,1 +1,11 @@
-<p>search-bar works!</p>
+<h2>{{city}}</h2>
+<div class="search-bar flex">
+    <button class="back" (click) = "back()"></button>
+    <div class="search-input">
+        <input (focusout)="clear($event.target)" (keyup.enter) = "change($event.target.value)" class="search" type="text" name="search" id="search"  (input)="onSearchChange($event.target.value)">
+        <div class="autocomplete">
+            <a [routerLink] = "item" *ngFor="let item of (list | substring:query) ">{{item}}</a>
+            <div class="auto-end"></div>
+        </div>
+    </div>
+</div>

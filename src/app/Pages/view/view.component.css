@@ -1,0 +1,50 @@
+:host()
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-widget
+{
+    width: 99%;
+    height: calc(99vh - 75px);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+    color: white;
+    margin: 2px;
+    transform: scale(0.9);
+}
+
+.header 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.title 
+{
+   
+    font-weight: bolder;
+    font-size: 34px;
+}
+
+.weather-img
+{
+    margin-top: 25px;
+    width: 200px;
+    margin-bottom: 35px;
+}
+
+
+
+.temp   
+{
+    font-weight: 1200;
+}

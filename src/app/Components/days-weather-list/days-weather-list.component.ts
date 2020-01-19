@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/Services/weather.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-days-weather-list',
@@ -8,11 +9,22 @@ import { WeatherService } from 'src/app/Services/weather.service';
 })
 export class DaysWeatherListComponent implements OnInit {
   list;
-  constructor(private ws:WeatherService) {}
-
+  city;
+  constructor(private ws:WeatherService, private route:ActivatedRoute) {}
+  params;
   ngOnInit() 
   {
-      this.ws.getWeather(ele => {this.list = ele.list, console.log(this.list)});
+      this.route.paramMap.subscribe(
+        ele =>
+        {
+           this.params = ele.params; 
+           this.ws.getWeather(this.params.city,ele => 
+            {
+              this.list = ele.list.splice(1)
+              this.city = ele.city;
+            });
+        }
+        );
       
   }
 

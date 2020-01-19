@@ -1,7 +1,7 @@
-<div *ngIf="weather != undefiend" class="weather-widget" [style.background-color]="weather.color">
-    <div> <h2 class="title">{{weather.day}}</h2>&nbsp;&nbsp;<h2 class = "date">12/4</h2></div>
+<a routerLink="/{{city?.name}}/{{weather.indx}}" *ngIf="weather != undefiend" class="weather-widget shadow" [style.background-color]="weather.color">
+    <div> <h2 class="title">{{weather.day}}</h2>&nbsp;&nbsp;<h2 class = "date">{{weather?.date.getMonth() + 1}}/{{weather?.date.getDate()}}</h2></div>
     <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="">
     <h4 class="temp">{{weather.main.temp}}°</h4>
     <div class="temp-range"><h5>{{weather.main.temp_min}}°</h5>&nbsp;&nbsp;<h5>{{weather.main.temp_max}}°</h5></div>
-</div>
+</a>
 

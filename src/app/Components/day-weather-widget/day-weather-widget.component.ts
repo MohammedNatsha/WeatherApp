@@ -10,6 +10,7 @@ export class DayWeatherWidgetComponent implements OnInit {
 
   constructor(private weatherService:WeatherService) { }
   @Input() weather;
+  @Input() city;
 
   ngOnInit() 
   {

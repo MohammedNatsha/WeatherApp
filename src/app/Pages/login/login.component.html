@@ -1,0 +1,23 @@
+<div>
+    <h1>Log in</h1>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div>
+            <label>email </label>
+            <input #firstname = "ngModel" required pattern=".*@pseu\.edu+$" minlength="3" maxlength="180" type="email" required name="password" id="password" ngModel>
+            <div *ngIf="firstname.touched">
+                <p *ngIf="firstname.errors?.minlength"> minlength is 3</p>
+                <p *ngIf="firstname.errors?.maxlength"> maxlength is 180 </p>
+                <p *ngIf="firstname.errors?.pattern">  email must end by @pseu.edu </p>
+            </div>
+        </div>
+        <div>
+            <label>Password </label>
+            <input type="password" required name="password" id="password" ngModel>
+        </div>
+       <div>
+            <button type="submit" [disabled]="!form.form.valid">
+                Save
+            </button>
+       </div>
+    </form>
+</div>

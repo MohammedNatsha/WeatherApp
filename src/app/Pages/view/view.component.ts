@@ -17,7 +17,7 @@ export class ViewComponent implements OnInit {
     this.route.paramMap.subscribe(
       ele =>
       {
-         this.params = ele.params; 
+         this.params = ele['params']; 
          this.ws.getWeather(this.params.city,ele => this.weather = ele.list[this.params.day%5]);
       }
       );

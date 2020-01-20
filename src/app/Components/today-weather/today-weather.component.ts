@@ -19,7 +19,7 @@ export class TodayWeatherComponent implements OnInit
     this.route.paramMap.subscribe(
       ele =>
       {
-         this.params = ele.params; 
+         this.params = ele['params']; 
          this.ws.getWeather(this.params.city,ele => 
           { 
             this.city = ele.city;

@@ -41,7 +41,7 @@ export class SearchBarComponent implements OnInit {
   change(searchValue: string)
   {
     if(!searchValue) return;
-    this.router.navigateByUrl(searchValue);
+    this['router'].navigateByUrl(searchValue);
   }
 
   clear(ele)

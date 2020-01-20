@@ -100,7 +100,7 @@ export class WeatherService {
 			let url = `https://api.openweathermap.org/data/2.5/find?lat=${crd.latitude}&lon=${crd.longitude}&appid=${this.myappID}&&cnt=${count}`;
 			return this.http.get(url).subscribe(w =>
 			{
-				w.list.forEach((ele,indx,arr) => {
+				w['list'].forEach((ele,indx,arr) => {
 					arr[indx] = ele.name;
 				});
 

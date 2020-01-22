@@ -108,4 +108,8 @@ export class WeatherService {
 			});
 		});
 	}
+
+	private name() {
+		
+	}
 }

@@ -4,7 +4,7 @@
     <div class="search-input">
         <input (focusout)="clear($event.target)" (keyup.enter) = "change($event.target.value)" class="search" type="text" name="search" id="search"  (input)="onSearchChange($event.target.value)">
         <div class="autocomplete">
-            <a [routerLink] = "item" *ngFor="let item of (list | substring:query) ">{{item}}</a>
+            <a [routerLink] = "'/' + item" *ngFor="let item of (list | substring:query) ">{{item}}</a>
             <div class="auto-end"></div>
         </div>
     </div>

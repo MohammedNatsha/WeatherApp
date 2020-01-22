@@ -1,4 +1,8 @@
-<a routerLink="/{{city?.name}}/0" class="weather-today shadow"  style="position: relative;" [style.background-color]="weather?.color">
+<a routerLink="/{{city?.name}}/0" class="weather-today w-highlight shadow"  style="position: relative;" [style.background-color]="weather?.color">
+    <div class="background">
+        <img src="http://openweathermap.org/img/wn/{{weather?.weather[0].icon}}@2x.png" alt="">
+        <img src="http://openweathermap.org/img/wn/{{weather?.weather[0].icon}}@2x.png" alt="">
+    </div>
     <div class="flex"> <h2 class="title">{{weather?.day}}</h2>&nbsp;&nbsp;<h2 class = "date">{{weather?.date.getMonth() + 1}}/{{weather?.date.getDate()}}</h2></div>
     <h2 class="temp">{{weather?.main.temp}}°</h2>
     <img class="weather-img" src="http://openweathermap.org/img/wn/{{weather?.weather[0].icon}}@2x.png" alt="">

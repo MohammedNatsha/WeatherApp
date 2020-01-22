@@ -12,7 +12,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './Pages/main-page/main-page.component';
 import { ViewComponent } from './Pages/view/view.component';
 import { SearchPipe } from './Pipes/search.pipe';
-import { TitleComponent } from './Components/title/title.component';
 import { LoginComponent } from './Pages/login/login.component';
 
 const routes: Routes = [
@@ -33,7 +32,6 @@ const routes: Routes = [
     MainPageComponent,
     ViewComponent,
     SearchPipe,
-    TitleComponent,
     LoginComponent
   ],
   imports: [

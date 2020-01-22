@@ -18,17 +18,18 @@
 {
     position: fixed;
     right: 10px;
+    padding: 15px;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
     background-color: rgba(0, 0, 0, 0);
     width:42px;
+    max-width: 42px;
     border-radius: 20px;
     border: transparent;
     height: 32px;
     /* background */
     background: url(../../../assets/Search-ico.png) no-repeat space 4px 4px;
     background-position: calc(100% - 10px);
-    max-width: 42px;
 }
 
 .search:focus
@@ -44,12 +45,12 @@
 
 .autocomplete
 {
-   
     position: absolute;
     top: 35px;
     right: 0px;
     visibility: hidden;
     transition-delay: 0.1s;
+    z-index: 10;
 }
 
 .search:focus + .autocomplete 
@@ -58,11 +59,6 @@
     transition-delay: 0s;
     transition-duration: 0.75s;
     visibility: visible;
-}
-
-.autocomplete
-{
-    z-index: 10;
 }
 
 .autocomplete *

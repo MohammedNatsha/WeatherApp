@@ -18,7 +18,7 @@ html,body
 
 .info-group
 {
-    width: 100vw;
+    width: 100%;
     justify-content: space-around;
     align-items: flex-end;
     text-align: center;
@@ -40,9 +40,73 @@ a
 }
 
 .center
- {
+{
     line-height: 200px;
     height: 200px;
-    border: 3px solid green;
     text-align: center;
 }
+
+/* Outline Hover */
+.w-highlight:hover
+{
+    filter: brightness(1.15);
+    transform: scale(1.1);
+    border: 3px solid white;
+}
+
+.w-highlight:hover > .background
+{
+    display: inherit;
+}
+
+.background
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background img:first-of-type
+{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    opacity: 0.35;
+    z-index: 0;
+    animation-iteration-count: infinite;
+    animation-name: img2-animation;
+    animation-duration: 3.2s;
+}
+
+.background img:last-of-type
+{
+    position: absolute;
+    top: -18px;
+    right: 10px;
+    opacity: 0.35;
+    z-index: 0;
+    animation-iteration-count: infinite;
+    animation-name: img1-animation;
+    animation-duration: 3.2s;
+}
+
+
+/* Animations */
+@keyframes img1-animation
+{
+    0%   { right:20%;}
+    75%  { right:150%;}
+    75.01% { right:-50%;}
+    100% { right:20%;}
+}
+
+@keyframes img2-animation
+{
+    0%   { right:60%;}
+    65%  { right:210%;}
+    65.01% { right:-50%;}
+    100% { right:60%;}
+}
+
+

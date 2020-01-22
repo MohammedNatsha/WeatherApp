@@ -10,8 +10,10 @@
     color: black;
     color: white;
     margin : 10px;
+    position: relative;
+    overflow: hidden;
+    
 }
-
 
 img 
 {
@@ -20,6 +22,8 @@ img
     margin-bottom: 0px;
     width: 80px;
 }
+
+
 
 .title 
 {

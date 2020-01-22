@@ -1,21 +1,23 @@
-<div class="weather-widget" [style.background-color]="weather?.color">
-    <div class="header"> 
-        <h2 class="title">{{weather?.day}}</h2>
-        <h2 class = "date">{{weather?.date.getMonth() + 1}}/{{weather?.date.getDate()}}</h2>
-    </div>
-
-    <img class = "weather-img" src="http://openweathermap.org/img/wn/{{weather?.weather[0].icon}}@2x.png" alt="">
-    <div class="flex info-group">
-        <div class="text-group"><h2>min </h2><h2>{{weather?.main.temp_min}}°</h2></div>
-        <div class="text-group"><h2>Tempreture</h2><h1 class="temp">{{weather?.main.temp}}°</h1></div>
-        <div class="text-group"><h2>max </h2><h2>{{weather?.main.temp_max}}°</h2></div>
-    </div>
-
-    <div class="flex info-group">
-        <div class="text-group"><h3>Pressure </h3><h2>{{weather?.main.pressure}}</h2></div>
-        <div class="text-group"><h3>Wind Speed</h3><h2>{{weather?.wind.speed}}</h2></div>
-        <div class="text-group"><h3>Humidity </h3><h2>{{weather?.main.humidity}}</h2></div>
-    </div>
-  
+<app-search-bar></app-search-bar>
+<div class="main">
+    <div class="weather-widget shadow" [style.background-color]="weather?.color">
+        <div class="header"> 
+            <h2 class="title">{{weather?.day}}</h2>
+            <h2 class = "date">{{weather?.date.getMonth() + 1}}/{{weather?.date.getDate()}}</h2>
+        </div>
+    
+        <img class = "weather-img" src="http://openweathermap.org/img/wn/{{weather?.weather[0].icon}}@2x.png" alt="">
+        <div class="flex info-group">
+            <div class="text-group"><h2>min </h2><h2>{{weather?.main.temp_min}}°</h2></div>
+            <div class="text-group"><h2>Tempreture</h2><h1 class="temp">{{weather?.main.temp}}°</h1></div>
+            <div class="text-group"><h2>max </h2><h2>{{weather?.main.temp_max}}°</h2></div>
+        </div>
+    
+        <div class="flex info-group">
+            <div class="text-group"><h3>Pressure </h3><h2>{{weather?.main.pressure}}</h2></div>
+            <div class="text-group"><h3>Wind Speed</h3><h2>{{weather?.wind.speed}}</h2></div>
+            <div class="text-group"><h3>Humidity </h3><h2>{{weather?.main.humidity}}</h2></div>
+        </div>
+      
+    </div>    
 </div>
-

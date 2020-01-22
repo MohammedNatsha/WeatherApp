@@ -15,6 +15,8 @@
     width: 100%;
     border-radius: 25px;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 .weather-today:nth-child(1) h2
@@ -26,9 +28,42 @@
 {
     margin-top: 0px;
     font-size: 72px;
+   
 }
 
 :host
 {
     display: flex;
+    box-sizing: border-box;
+}
+
+.background
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background img:first-of-type
+{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    opacity: 0.35;
+    z-index: 0;
+    animation-iteration-count: infinite;
+    animation-name: img2-animation;
+    animation-duration: 4s;
+}
+
+.background img:last-of-type
+{
+    position: absolute;
+    top: -18px;
+    right: 10px;
+    opacity: 0.35;
+    z-index: 0;
+    animation-iteration-count: infinite;
+    animation-name: img1-animation;
+    animation-duration: 4s;
 }

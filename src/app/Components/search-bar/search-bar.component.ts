@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/Services/weather.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
@@ -12,7 +12,7 @@ export class SearchBarComponent implements OnInit {
   window;
   city;
   list;
-  constructor(private ws:WeatherService) { }
+  constructor(private ws:WeatherService,private route:ActivatedRoute) { }
   query;
 
   ngOnInit()
@@ -21,10 +21,17 @@ export class SearchBarComponent implements OnInit {
     this.ws.getNearCities(ele => 
       {
         this.list = ele.list;
-        this.city = this.list[0]; 
       });
 
-     
+      this.route.paramMap.subscribe(
+        elem =>
+        {
+           this.ws.getWeather(elem['params'].city,ele => 
+            { 
+              this.city = ele.city.name;
+            });
+        }
+        );
  
   }
 

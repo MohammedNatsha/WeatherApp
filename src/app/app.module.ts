@@ -12,10 +12,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './Pages/main-page/main-page.component';
 import { ViewComponent } from './Pages/view/view.component';
 import { SearchPipe } from './Pipes/search.pipe';
-import { LoginComponent } from './Pages/login/login.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
   { path: ':city', component: MainPageComponent },
   { path: ':city/:day', component: ViewComponent },
   { path: '**', component: MainPageComponent }
@@ -31,8 +29,7 @@ const routes: Routes = [
     TodayWeatherComponent,
     MainPageComponent,
     ViewComponent,
-    SearchPipe,
-    LoginComponent
+    SearchPipe
   ],
   imports: [
     BrowserModule,

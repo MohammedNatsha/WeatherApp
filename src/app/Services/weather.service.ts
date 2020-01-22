@@ -28,11 +28,11 @@ export class WeatherService {
 					weather['day'] = days[weather['date'].getDay()];
 					weather['color'] = daycolors[weather['date'].getDay()];
 					weather.main.temp -= 273.15;
-					weather.main.temp = Math.round(weather.main.temp*100)/100 ;
+					weather.main.temp = Math.round(weather.main.feels_like) ;
 					weather.main.temp_max -= 273.15;
 					weather.main.temp_min -= 273.15;
-					weather.main.temp_max = Math.round(weather.main.temp_max*100)/100 ;
-					weather.main.temp_min = Math.round(weather.main.temp_min*100)/100 ;
+					weather.main.temp_max = Math.round(weather.main.temp_max);
+					weather.main.temp_min = Math.round(weather.main.temp_min);
 					weather['indx'] = indx;
 				});
 				
@@ -54,12 +54,12 @@ export class WeatherService {
 						let daycolors = ['#6350EF', '#28E0AE', '#FF1A9B', '#FFBB2C', '#239AFA', '#D92222', '#2160F7'];
 						weather['day'] = days[weather['date'].getDay()];
 						weather['color'] = daycolors[weather['date'].getDay()];
-						weather.main.temp -= 273.15;
-						weather.main.temp = Math.round(weather.main.temp*100)/100 ;
+						weather.main.feels_like -= 273.15;
+						weather.main.temp = Math.round(weather.main.feels_like) ;
 						weather.main.temp_max -= 273.15;
 						weather.main.temp_min -= 273.15;
-						weather.main.temp_max = Math.round(weather.main.temp_max*100)/100 ;
-						weather.main.temp_min = Math.round(weather.main.temp_min*100)/100 ;
+						weather.main.temp_max = Math.round(weather.main.temp_max) ;
+						weather.main.temp_min = Math.round(weather.main.temp_min) ;
 						weather['indx'] = indx;
 					});
 					
